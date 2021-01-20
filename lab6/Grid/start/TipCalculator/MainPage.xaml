@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TipCalculator"
+             x:Class="TipCalculator.MainPage"
+             Padding="40">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label VerticalOptions="Center" Grid.Column="0" Grid.Row="0" Text="Bill" />
+        <Entry Grid.Column="1" Grid.Row="0" x:Name="billInput" Placeholder="Enter Amount" Keyboard="Numeric" />
+
+        <Label Grid.Column="0" Grid.Row="1" Text="Tip" />
+        <Label Grid.Column="1" Grid.Row="1" x:Name="tipOutput" Text="0.00" />
+
+        <Label Grid.Column="0" Grid.Row="2" Text="Total" />
+        <Label Grid.Column="1" Grid.Row="2" x:Name="totalOutput" Text="0.00" />
+
+        <Label VerticalOptions="End" HorizontalOptions="Start" Grid.Column="0" Grid.Row="3" Text="Tip Percentage" />
+        <Label VerticalOptions="End" HorizontalOptions="End" Grid.Column="1" Grid.Row="3" x:Name="tipPercent" Text="15%" />
+
+        <Slider BackgroundColor="#2F2F2F" ThumbColor="#E69366" Grid.Row="4" Grid.ColumnSpan="2" x:Name="tipPercentSlider" Minimum="0" Maximum="100" Value="15" />
+
+        <Button Grid.Column="0" Grid.Row="5" Text="15%" Clicked="OnNormalTip" />
+        <Button Grid.Column="1" Grid.Row="5" Text="20%" Clicked="OnGenerousTip" />
+
+        <Button Grid.Column="0" Grid.Row="6" x:Name="roundDown" Text="Round Down" />
+        <Button Grid.Column="1" Grid.Row="6" x:Name="roundUp"   Text="Round Up" />
+
+    </Grid>
+
+</ContentPage>
