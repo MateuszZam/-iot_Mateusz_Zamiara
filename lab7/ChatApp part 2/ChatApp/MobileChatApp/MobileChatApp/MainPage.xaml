@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileChatApp.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2F2F2F"
+               Padding="24"
+               CornerRadius="0">
+            <Label Text="Welcome"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   FontSize="36"
+                   FontAttributes="Bold"/>
+        </Frame>
+        <Grid x:Name="gridLogin">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Entry x:Name="textUser"
+                   Placeholder="User name" />
+            <Button x:Name="btnSignIn"
+                    Grid.Row="1"
+                    Text="Sign in"
+                    TextColor="White" 
+                    BackgroundColor="#2F2F2F"
+                    FontSize="Large"
+                    FontAttributes="Bold" />
+        </Grid>
+        <Grid x:Name="gridChat"
+              IsVisible="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <ListView x:Name="chatList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Summary}" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Entry Grid.Row="1"
+                   Placeholder="Enter message"
+                   x:Name="textMsg"/>
+            <Button Grid.Row="2"
+                    x:Name="btnSend"
+                    Text="Send message" 
+                    TextColor="White" 
+                    BackgroundColor="#2F2F2F"
+                    FontSize="Large"
+                    FontAttributes="Bold" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

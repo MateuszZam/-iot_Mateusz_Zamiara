@@ -1,0 +1,23 @@
+﻿@model ChatSignalR.Models.SignInVm
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "_Layout";
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="py-3 text-danger font-weight-bold">
+        @Html.ValidationSummary()
+    </div>
+}
+
+<form asp-controller="Home" asp-action="SignIn" method="post">
+    <div class="row">
+        <div class="col-12">
+            <input class="form-control" asp-for="UserName" placeholder="User name" />
+        </div>
+        <div class="col-12 text-right py-3">
+            <button class="btn btn-success">Sign in</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatApp", "ChatSignalR\ChatApp.csproj", "{11AD1D0D-C891-4C6D-BAE8-35C14EA4A270}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileChatApp.Android", "MobileChatApp\MobileChatApp.Android\MobileChatApp.Android.csproj", "{53B33625-3D8E-4DAA-BFEF-0E247958EC4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileChatApp", "MobileChatApp\MobileChatApp\MobileChatApp.csproj", "{B5D437B7-A078-48B1-9BFE-FF1694B54C02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatAppDTO", "ChatAppDTO\ChatAppDTO.csproj", "{CC6678D4-7EFA-4530-B50D-F762CAD704E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11AD1D0D-C891-4C6D-BAE8-35C14EA4A270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11AD1D0D-C891-4C6D-BAE8-35C14EA4A270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11AD1D0D-C891-4C6D-BAE8-35C14EA4A270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11AD1D0D-C891-4C6D-BAE8-35C14EA4A270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53B33625-3D8E-4DAA-BFEF-0E247958EC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B33625-3D8E-4DAA-BFEF-0E247958EC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B33625-3D8E-4DAA-BFEF-0E247958EC4D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{53B33625-3D8E-4DAA-BFEF-0E247958EC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B33625-3D8E-4DAA-BFEF-0E247958EC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53B33625-3D8E-4DAA-BFEF-0E247958EC4D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B5D437B7-A078-48B1-9BFE-FF1694B54C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D437B7-A078-48B1-9BFE-FF1694B54C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D437B7-A078-48B1-9BFE-FF1694B54C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D437B7-A078-48B1-9BFE-FF1694B54C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6678D4-7EFA-4530-B50D-F762CAD704E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6678D4-7EFA-4530-B50D-F762CAD704E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6678D4-7EFA-4530-B50D-F762CAD704E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6678D4-7EFA-4530-B50D-F762CAD704E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {119998C1-588E-44BD-9E96-024D78684085}
+	EndGlobalSection
+EndGlobal
