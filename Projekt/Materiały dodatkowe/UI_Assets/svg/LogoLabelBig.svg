@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="116" viewBox="0 0 200 116">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #edf5e1;
+        font-family: AWConquerorStdCarved-Regular, AWConqueror Std Carved;
+      }
+
+      .cls-1 {
+        font-size: 42px;
+      }
+
+      .cls-2 {
+        font-size: 60px;
+      }
+    </style>
+  </defs>
+  <g id="Component_1_1" data-name="Component 1 – 1" transform="translate(1)">
+    <text id="FOREVER" class="cls-1" transform="translate(98 107)"><tspan x="-97.734" y="0">FOREVER</tspan></text>
+    <text id="PAPER" class="cls-2" transform="translate(96 70)"><tspan x="-96.03" y="0">PAPER</tspan></text>
+  </g>
+</svg>

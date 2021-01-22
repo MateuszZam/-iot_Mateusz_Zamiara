@@ -1,0 +1,22 @@
+--- AZURE WEB API ---
+Nazwa: paperforeverapi
+
+--- AZURE DATABASE ---
+Nazwa: paperforeverdb
+Nazwa serwera: paperforeverserver
+Nazwa admina do serwera: paperforeveradmin
+Hasło admina do serwera: AdminPassword2021!
+
+--- ADMIN ---
+Nazwa: Maks
+Email: mwawrzyniak13@edu.cdv.pl
+Hasło: MaksPassword2021!
+
+--- USER ---
+Nazwa: Mateusz
+Email: mzamiara1@edu.cdv.pl
+Hasło: MateuszPassword2021!
+
+--- PUBLISH .APK KEY ---
+Alias: PFKeystore
+Hasło: PaperForever2021!

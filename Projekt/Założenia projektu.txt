@@ -1,0 +1,22 @@
+Grupa projektowa (2) - Maksymilian Wawrzyniak 23130, Mateusz Zamiara 23146
+
+Projekt: Aplikacja do zarządzania paragonami
+
+Struktura projektu:
+
+1) Aplikacja mobilna na system Android, z poziomu której użytkownik może
+zarządzać swoją bazą paragonów
+- Rejestracja / logowanie (uzystkiwanie tokena autoryzacji, który)
+- Przeglądanie listy sklepów -> lista wszystkich sklepów po zescrollowaniu na dół i do góry generuje closed stream exception,
+nie udało sie przeskoczyć tego błędu, wynika on ogólnie z zapisywania zdjęć w bazie, co jest złą praktyką, jednak taki sposób
+został podjęty ze względu na blokadę ze strony Azure, który najprawdopodobniej nie pozwala na przesył plików w studenckiej subskrypcji
+- Wyszukiwanie sklepow po nazwie
+- Wyświetlanie listy sklepów danej kategorii
+- Wybieranie z listy sklepów wraz z kategoriami, sklepu w którym zrobił zakupy
+- Dodawanie nowej pozycji paragonu (w skład pozycji wchodzi data dodania, sklep w którym
+dokonany został zakup, zdjęcie paragonu, wydana kwota - niestety bez przecinka lub kropki - możliwy błąd)
+- Zdjęcie dodane może zostać poprzez wybranie z galerii lub zrobione za pomocą telefonu
+
+2) Web API komunikujące aplikację z bazą i koordynujące operacje użytkownika
+
+3) Baza danych zawierająca bazę sklepów, paragonów oraz dane użytkownika (hasła w bazie zaszyfrowane)
