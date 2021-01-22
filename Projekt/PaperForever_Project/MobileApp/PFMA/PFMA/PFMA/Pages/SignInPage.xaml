@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:renderers="clr-namespace:PFMA.Renderers;assembly=PFMA"
+             mc:Ignorable="d"
+             x:Class="PFMA.Pages.SignInPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#5CDB95">
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Margin="0,40,0,0"
+                         BackgroundColor="#379683">
+                <Image Source="LogoLabelBig.png"
+                       Margin="0,0,0,20"
+                       HorizontalOptions="CenterAndExpand"
+                       BackgroundColor="#379683"/>
+            </StackLayout>
+
+            <StackLayout Margin="30"
+                         Spacing="15">
+                <Label Text="Just came back from the store?"
+                   Margin="0,20,0,0"
+                   TextColor="#EDF5E1"
+                   VerticalOptions="Start"
+                   FontSize="Large"
+                   HorizontalOptions="CenterAndExpand" />
+
+                <renderers:BorderlessEntry Placeholder="Email"
+                                       x:Name="LogEmail"
+                                       FontAttributes="Bold"
+                                       TextColor="#05386B"
+                                       PlaceholderColor="#EDF5E1"
+                                       BackgroundColor="#8EE4AF" />
+                <BoxView HeightRequest="1"
+                     BackgroundColor="#EDF5E1"
+                     Margin="0,-15,0,0" />
+                <renderers:BorderlessEntry Placeholder="Password"
+                                       x:Name="LogPassword"
+                                       IsPassword="True"
+                                       FontAttributes="Bold"
+                                       TextColor="#05386B"
+                                       PlaceholderColor="#EDF5E1"
+                                       BackgroundColor="#8EE4AF" />
+                <BoxView HeightRequest="1"
+                     BackgroundColor="#EDF5E1"
+                     Margin="0,-15,0,0" />
+
+                <Button x:Name="BtnSignIn"
+                    Clicked="BtnSignIn_OnClicked"
+                    BackgroundColor="#05386B"
+                    CornerRadius="5"
+                    Text="SIGN IN"
+                    TextColor="#EDF5E1"
+                    FontAttributes="Bold"
+                    FontSize="Large"/>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Margin="0,20,0,0">
+                    <Label Text="Tired of losing your receipts?"
+                           TextColor="#EDF5E1" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Margin="0,-5,0,0">
+                    <Label Text="SIGN UP"
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           TextDecorations="Underline"
+                           TextColor="#05386B">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="LblSignUp"
+                                                  Tapped="LblSignUp_OnTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand"
+                         Margin="0,0,0,0">
+                <Image Source="HelloScreenG.png"
+                       Margin="-80,30,0,0"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

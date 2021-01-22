@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:renderers="clr-namespace:PFMA.Renderers;assembly=PFMA"
+             x:Class="PFMA.MainPage">
+
+    <StackLayout VerticalOptions="Center">
+        <Entry Placeholder="Defauls entry control"/>
+        <renderers:BorderlessEntry Placeholder="Custom entry control"/>
+        <Picker Title="Default picker"/>
+        <renderers:BorderlessPicker Title="Custom picker"/>
+    </StackLayout>
+
+</ContentPage>

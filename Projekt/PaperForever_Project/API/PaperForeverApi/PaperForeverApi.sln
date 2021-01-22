@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperForeverApi", "PaperForeverApi\PaperForeverApi.csproj", "{CF5BE627-4C75-448B-92C0-3089687B9775}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF5BE627-4C75-448B-92C0-3089687B9775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5BE627-4C75-448B-92C0-3089687B9775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5BE627-4C75-448B-92C0-3089687B9775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5BE627-4C75-448B-92C0-3089687B9775}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8F86772-CED3-4238-A8E5-EEB9E7728355}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:renderers="clr-namespace:PFMA.Renderers;assembly=PFMA"
+             mc:Ignorable="d"
+             x:Class="PFMA.Pages.SearchShopsPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#5CDB95">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Frame Padding="5"
+                       HasShadow="False"
+                       HorizontalOptions="FillAndExpand"
+                       BackgroundColor="#379683"
+                       BorderColor="Transparent">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="LeftButton.png"
+                               Margin="10,0,10,0"
+                               HeightRequest="40">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="SearchBack"
+                                                      Tapped="SearchBack_OnTapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Frame Margin="0,0,15,0"
+                               Padding="0"
+                               HasShadow="False"
+                               HorizontalOptions="FillAndExpand">
+                            <renderers:BorderlessEntry Placeholder="Find shop"
+                                                       PlaceholderColor="#EDF5E1"
+                                                       BackgroundColor="#5CDB95"
+                                                       TextColor="#05386B"
+                                                       FontAttributes="Bold"
+                                                       x:Name="ShopNameInput"
+                                                       TextChanged="ShopNameInput_OnTextChanged"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <CollectionView x:Name="CvShops"
+                            SelectionMode="Single"
+                            SelectionChanged="CvShops_OnSelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="1"
+                                     Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="15,10,15,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <Frame Padding="5"
+                                   CornerRadius="5"
+                                   BackgroundColor="#8EE4AF"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"></Frame>
+                            <Label FontSize="25"
+                                   Grid.Column="0"
+                                   TextColor="#05386B"
+                                   FontAttributes="Bold"
+                                   Margin="10,0,0,0"
+                                   VerticalOptions="Center"
+                                   Text="{Binding Name}"/>
+                            <Frame BackgroundColor="#05386B"
+                                   BorderColor="#379683"
+                                   Padding="8"
+                                   CornerRadius="30"
+                                   Grid.Column="1"
+                                   Margin="0,0,10,0"
+                                   HeightRequest="50">
+                                <Label TextColor="#EDF5E1"
+                                       FontAttributes="Bold"
+                                       FontSize="15"
+                                       Text="{Binding Type}"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

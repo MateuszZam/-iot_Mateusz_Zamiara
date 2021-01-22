@@ -1,0 +1,657 @@
+{
+	"info": {
+		"_postman_id": "ebc89a38-c6c4-42e2-a8c1-4e9267fdb5de",
+		"name": "PaperForever",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/users/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Maks\",\r\n    \"Email\":\"mwawrzyniak13@edu.cdv.pl\",\r\n    \"Password\":\"MaksPassword2021!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/users/register",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						},
+						"description": "register"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/users/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\":\"mwawrzyniak13@edu.cdv.pl\",\r\n    \"Password\":\"MaksPassword2021!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/users/login",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						},
+						"description": "login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shops",
+			"item": [
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/shops",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im13YXdyenluaWFrMTNAZWR1LmNkdi5wbCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Im13YXdyenluaWFrMTNAZWR1LmNkdi5wbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjA5ODg4MTE0LCJleHAiOjE2MDk5NzQ1MTQsImlzcyI6ImxvY2FsaG9zdC5jb20iLCJhdWQiOiJsb2NhbGhvc3QuY29tIn0.KIfu2ZSfqiCCEFpMf52Q0zolVvo7RdpHdl0kVgRdskY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Biedronka",
+									"type": "text"
+								},
+								{
+									"key": "Type",
+									"value": "Jedzenie",
+									"type": "text"
+								},
+								{
+									"key": "InCityCount",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"value": null,
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/shops",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"shops"
+							]
+						},
+						"description": "add shop"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/shops",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im13YXdyenluaWFrMTNAZWR1LmNkdi5wbCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Im13YXdyenluaWFrMTNAZWR1LmNkdi5wbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjA5ODg4MTE0LCJleHAiOjE2MDk5NzQ1MTQsImlzcyI6ImxvY2FsaG9zdC5jb20iLCJhdWQiOiJsb2NhbGhvc3QuY29tIn0.KIfu2ZSfqiCCEFpMf52Q0zolVvo7RdpHdl0kVgRdskY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/shops",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"shops"
+							]
+						},
+						"description": "show all shops"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/shops/ShopsOfType?type=Jedzenie",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im16YW1pYXJhMUBlZHUuY2R2LnBsIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibXphbWlhcmExQGVkdS5jZHYucGwiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VycyIsIm5iZiI6MTYwOTg4ODUwNywiZXhwIjoxNjA5OTc0OTA3LCJpc3MiOiJsb2NhbGhvc3QuY29tIiwiYXVkIjoibG9jYWxob3N0LmNvbSJ9.uBgd6rq0DHaTIEBCmGcJBZLOLe5UTLNrywDHV0UgqAk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/shops/ShopsOfType?type=Jedzenie",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"shops",
+								"ShopsOfType"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Jedzenie"
+								}
+							]
+						},
+						"description": "show shops of type"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/shops/FindShops?name=B",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im16YW1pYXJhMUBlZHUuY2R2LnBsIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibXphbWlhcmExQGVkdS5jZHYucGwiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VycyIsIm5iZiI6MTYwOTg4ODUwNywiZXhwIjoxNjA5OTc0OTA3LCJpc3MiOiJsb2NhbGhvc3QuY29tIiwiYXVkIjoibG9jYWxob3N0LmNvbSJ9.uBgd6rq0DHaTIEBCmGcJBZLOLe5UTLNrywDHV0UgqAk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/shops/FindShops?name=B",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"shops",
+								"FindShops"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "B"
+								}
+							]
+						},
+						"description": "show shops of name"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/shops/ShopDetails/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im16YW1pYXJhMUBlZHUuY2R2LnBsIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibXphbWlhcmExQGVkdS5jZHYucGwiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VycyIsIm5iZiI6MTYwOTg4ODUwNywiZXhwIjoxNjA5OTc0OTA3LCJpc3MiOiJsb2NhbGhvc3QuY29tIiwiYXVkIjoibG9jYWxob3N0LmNvbSJ9.uBgd6rq0DHaTIEBCmGcJBZLOLe5UTLNrywDHV0UgqAk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/shops/ShopDetails/1",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"shops",
+								"ShopDetails",
+								"1"
+							]
+						},
+						"description": "show shop details"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/shops/1",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im13YXdyenluaWFrMTNAZWR1LmNkdi5wbCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Im13YXdyenluaWFrMTNAZWR1LmNkdi5wbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjA5ODg4MTE0LCJleHAiOjE2MDk5NzQ1MTQsImlzcyI6ImxvY2FsaG9zdC5jb20iLCJhdWQiOiJsb2NhbGhvc3QuY29tIn0.KIfu2ZSfqiCCEFpMf52Q0zolVvo7RdpHdl0kVgRdskY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Carrefour",
+									"type": "text"
+								},
+								{
+									"key": "Type",
+									"value": "Jedzenie",
+									"type": "text"
+								},
+								{
+									"key": "InCityCount",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"value": null,
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/shops/2",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"shops",
+								"2"
+							]
+						},
+						"description": "edit shop"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/shops/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im13YXdyenluaWFrMTNAZWR1LmNkdi5wbCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Im13YXdyenluaWFrMTNAZWR1LmNkdi5wbCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwibmJmIjoxNjA5ODg4MTE0LCJleHAiOjE2MDk5NzQ1MTQsImlzcyI6ImxvY2FsaG9zdC5jb20iLCJhdWQiOiJsb2NhbGhvc3QuY29tIn0.KIfu2ZSfqiCCEFpMf52Q0zolVvo7RdpHdl0kVgRdskY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "Carrefour",
+									"type": "text"
+								},
+								{
+									"key": "Type",
+									"value": "Jedzenie",
+									"type": "text"
+								},
+								{
+									"key": "InCityCount",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"value": null,
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/shops/2",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"shops",
+								"2"
+							]
+						},
+						"description": "delete shop"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Receipts",
+			"item": [
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/receipts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im16YW1pYXJhMUBlZHUuY2R2LnBsIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibXphbWlhcmExQGVkdS5jZHYucGwiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VycyIsIm5iZiI6MTYwOTg4ODUwNywiZXhwIjoxNjA5OTc0OTA3LCJpc3MiOiJsb2NhbGhvc3QuY29tIiwiYXVkIjoibG9jYWxob3N0LmNvbSJ9.uBgd6rq0DHaTIEBCmGcJBZLOLe5UTLNrywDHV0UgqAk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Price",
+									"value": "15.99",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"value": null,
+									"type": "file"
+								},
+								{
+									"key": "UserId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "ShopId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/receipts",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"receipts"
+							]
+						},
+						"description": "add receipt"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/receipts/UserReceipts/2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im16YW1pYXJhMUBlZHUuY2R2LnBsIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibXphbWlhcmExQGVkdS5jZHYucGwiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VycyIsIm5iZiI6MTYwOTg4ODUwNywiZXhwIjoxNjA5OTc0OTA3LCJpc3MiOiJsb2NhbGhvc3QuY29tIiwiYXVkIjoibG9jYWxob3N0LmNvbSJ9.uBgd6rq0DHaTIEBCmGcJBZLOLe5UTLNrywDHV0UgqAk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Price",
+									"value": "15.99",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"value": null,
+									"type": "file"
+								},
+								{
+									"key": "UserId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "ShopId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/receipts/UserReceipts/2",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"receipts",
+								"UserReceipts",
+								"2"
+							]
+						},
+						"description": "show user receipts"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/receipts/ReceiptDetails?uid=2&rid=1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im16YW1pYXJhMUBlZHUuY2R2LnBsIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibXphbWlhcmExQGVkdS5jZHYucGwiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VycyIsIm5iZiI6MTYwOTg4ODUwNywiZXhwIjoxNjA5OTc0OTA3LCJpc3MiOiJsb2NhbGhvc3QuY29tIiwiYXVkIjoibG9jYWxob3N0LmNvbSJ9.uBgd6rq0DHaTIEBCmGcJBZLOLe5UTLNrywDHV0UgqAk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Price",
+									"value": "15.99",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"value": null,
+									"type": "file"
+								},
+								{
+									"key": "UserId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "ShopId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/receipts/ReceiptDetails?uid=2&rid=1",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"receipts",
+								"ReceiptDetails"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": "2"
+								},
+								{
+									"key": "rid",
+									"value": "1"
+								}
+							]
+						},
+						"description": "show receipt details"
+					},
+					"response": []
+				},
+				{
+					"name": "https://paperforeverapi.azurewebsites.net/api/receipts/1",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im16YW1pYXJhMUBlZHUuY2R2LnBsIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoibXphbWlhcmExQGVkdS5jZHYucGwiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VycyIsIm5iZiI6MTYwOTg4ODUwNywiZXhwIjoxNjA5OTc0OTA3LCJpc3MiOiJsb2NhbGhvc3QuY29tIiwiYXVkIjoibG9jYWxob3N0LmNvbSJ9.uBgd6rq0DHaTIEBCmGcJBZLOLe5UTLNrywDHV0UgqAk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Price",
+									"value": "15.99",
+									"type": "text"
+								},
+								{
+									"key": "Image",
+									"value": null,
+									"type": "file"
+								},
+								{
+									"key": "UserId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "ShopId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://paperforeverapi.azurewebsites.net/api/receipts/1",
+							"protocol": "https",
+							"host": [
+								"paperforeverapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"receipts",
+								"1"
+							]
+						},
+						"description": "delete receipt"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
